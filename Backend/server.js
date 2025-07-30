@@ -1,8 +1,6 @@
 require('dotenv').config();
-const app = require('./src/app')
+const app = require('./src/app');
 
-
-
-app.listen(4000, () => {
-    console.log('Server is running on http://localhost:4000')
-})
+// ❌ DO NOT call app.listen here
+// ✅ Just export the app
+module.exports = app;
